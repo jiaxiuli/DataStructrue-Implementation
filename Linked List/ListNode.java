@@ -1,5 +1,17 @@
 package LinkedList;
-
+/*
+Author: Jiaxiu Li
+Methods:
+ListNode nodeInsert( ListNode head, int index, ListNode insertNode) | Insert a new node to the list at a specific position.
+void preOrderPrint(ListNode head)                                   | print the list from the first element to the last element.
+void postOrderPrint(ListNode head)                                  | print the list from the last element to the first one.
+ListNode nodeRemove(ListNode head, int index)                       | remove the element at the specific position.
+ListNode setList(ListNode head, int index, ListNode newNode)        | change the value of the element at the specific position.
+ListNode getNode(ListNode head, int index)                          | get the value of the element at the specific position.
+int getListSize(ListNode head)                                      | get the length of the list.
+ListNode getSubList(ListNode head, int index)                       | get the sublist from a specific position to the end.
+ListNode getSubList(ListNode head, int from, int to)                | get the sublist from a specific position to another specific position.
+*/
 public class ListNode {
 	int val;
 	ListNode next;
