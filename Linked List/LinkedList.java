@@ -85,7 +85,7 @@ public class LinkedList {
 		System.out.println("post-order: ");
 		head.postOrderPrint(sublist1);
 		
-	    //ÅÅĞò
+	    //sort using my linked list
 		int arr[] = new int[] {5,6,2,6,6,1,3,5,10,34,52,23,14,5,4,25,5,25,56,46,36,26,75,47,37,67,57,47,34,
 				65,46,36543,76,567,45,676,4356,76,4467,7,65};
 		
