@@ -2,6 +2,9 @@ package LinkedList;
 /*
 Author: Jiaxiu Li
 Methods:
+ListNode()                                                          | default constructor.
+ListNode(int val)                                                   | constructor with the value of the node.
+ListNode(int val,  ListNode last)                                   | constructor with the value and the last node of the node.
 ListNode nodeInsert( ListNode head, int index, ListNode insertNode) | Insert a new node to the list at a specific position.
 void preOrderPrint(ListNode head)                                   | print the list from the first element to the last element.
 void postOrderPrint(ListNode head)                                  | print the list from the last element to the first one.
