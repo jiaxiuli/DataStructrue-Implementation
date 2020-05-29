@@ -1,0 +1,111 @@
+package LinkedList;
+
+public class ListNode {
+	int val;
+	ListNode next;
+	ListNode last;
+	
+	public ListNode() {}
+	public ListNode(int val) { this.val = val ;}
+	public ListNode(int val,  ListNode last) {
+		this.val = val;
+	//	this.next = next;
+		this.last = last;
+	}
+	//Insert a new node to the list
+	public ListNode nodeInsert( ListNode head, int index, ListNode insertNode) {
+		ListNode node = head;
+		if(index == 0) {
+			insertNode.next = head;
+			head.last = insertNode;
+			node = insertNode;
+		}else {
+		for( int i = 1 ; i < index ; i++ ) {
+			head = head.next;
+		}
+		head.next.last = insertNode;
+		insertNode.last = head;
+		insertNode.next = head.next;
+		head.next = insertNode;
+		}
+		return node;
+	}
+ //print the list from the first to the end
+	public void preOrderPrint(ListNode head) {
+		while( head != null ) {
+			System.out.print(" "+head.val);
+			head = head.next;
+		}
+	}
+	//print the list from the last one to the first one
+	public void postOrderPrint(ListNode head) {
+		while( head.next != null ) {
+			head = head.next;
+		}
+		while( head != null ) {
+			System.out.print(" "+head.val);
+			head = head.last;
+		}
+	}
+//remove a specific node from the list
+	public ListNode nodeRemove(ListNode head, int index) {
+		ListNode node = head;
+		for( int i = 1 ; i <= index ; i++ ) {
+			head = head.next;
+		}
+		head.last.next = head.next;
+		head.next.last = head.last;
+		
+		
+		return node;
+	}
+//change one of the element in the list
+	public ListNode setList(ListNode head, int index, ListNode newNode) {
+		ListNode node = head;
+		for( int i = 1 ; i <= index ; i++ ) {
+			head = head.next;
+		}
+		head.last.next = newNode;
+		head.next.last = newNode;
+		newNode.next = head.next;
+		newNode.last = head.last;
+		return node;
+	}
+//get the value of the node through index
+	public ListNode getNode(ListNode head, int index) {
+		ListNode node = head;
+		for( int i = 1 ; i <= index ; i++ ) {
+			head = head.next;
+		}
+		node = head;
+		return node;
+	}
+//get the length of the list
+	public int getListSize(ListNode head) {
+		int count = 0;
+		while( head != null ) {
+			count++;
+			head = head.next;
+		}
+		return count;
+	}
+	//get sublist from a sprcific position to the end
+	public ListNode getSubList(ListNode head, int index) {
+		return getSubList(head, index, getListSize(head) - 1);
+	}
+	//get sublist from a specific position to another specific position 
+	public ListNode getSubList(ListNode head, int from, int to) {
+		for( int i = 1 ; i <= from ; i++ ) {
+			head = head.next;
+		}
+	    ListNode sublist = new ListNode(head.val, null);
+	    ListNode node = sublist;
+	    for( int i = 0 ; i < to - from ; i++ ) {
+	    	head = head.next;
+	    	sublist.next = new ListNode(head.val, sublist);
+	    	sublist = sublist.next;
+	    }
+		
+		return node;
+	}
+}
