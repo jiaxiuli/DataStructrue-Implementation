@@ -2,18 +2,18 @@ package LinkedList;
 /*
 Author: Jiaxiu Li
 Methods:
-ListNode()                                                          | default constructor.
-ListNode(int val)                                                   | constructor with the value of the node.
-ListNode(int val,  ListNode last)                                   | constructor with the value and the last node of the node.
-ListNode nodeInsert( ListNode head, int index, ListNode insertNode) | Insert a new node to the list at a specific position.
-void preOrderPrint(ListNode head)                                   | print the list from the first element to the last element.
-void postOrderPrint(ListNode head)                                  | print the list from the last element to the first one.
-ListNode nodeRemove(ListNode head, int index)                       | remove the element at the specific position.
-ListNode setList(ListNode head, int index, ListNode newNode)        | change the value of the element at the specific position.
-ListNode getNode(ListNode head, int index)                          | get the value of the element at the specific position.
-int getListSize(ListNode head)                                      | get the length of the list.
-ListNode getSubList(ListNode head, int index)                       | get the sublist from a specific position to the end.
-ListNode getSubList(ListNode head, int from, int to)                | get the sublist from a specific position to another specific position.
+ListNode()                                                            | default constructor.
+ListNode(T val)                                                       | constructor with the value of the node.
+ListNode(T val,  ListNode last)                                       | constructor with the value and the last node of the node.
+ListNode<T> nodeInsert( ListNode head, int index, ListNode insertNode)| Insert a new node to the list at a specific position.
+void preOrderPrint(ListNode head)                                     | print the list from the first element to the last element.
+void postOrderPrint(ListNode head)                                    | print the list from the last element to the first one.
+ListNode<T> nodeRemove(ListNode head, int index)                      | remove the element at the specific position.
+ListNode<T> setList(ListNode head, int index, ListNode newNode)       | change the value of the element at the specific position.
+ListNode<T> getNode(ListNode head, int index)                         | get the value of the element at the specific position.
+int getListSize(ListNode head)                                        | get the length of the list.
+ListNode<T> getSubList(ListNode head, int index)                      | get the sublist from a specific position to the end.
+ListNode<T> getSubList(ListNode head, int from, int to)               | get the sublist from a specific position to another specific position.
 */
 public class ListNode<T> {
 	T val;
